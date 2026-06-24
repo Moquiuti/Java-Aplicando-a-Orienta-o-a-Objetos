@@ -1,0 +1,30 @@
+# Compilados Java
+*.class
+
+# Logs
+*.log
+
+# Arquivos de build/distribuicao
+*.jar
+*.war
+*.ear
+
+# Build tools
+.gradle/
+build/
+out/
+target/
+
+# IDEs e editores
+.idea/
+*.iml
+.vscode/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos temporarios
+*.tmp
+*.swp
+
