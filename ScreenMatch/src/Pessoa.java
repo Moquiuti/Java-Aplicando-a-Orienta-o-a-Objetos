@@ -1,5 +1,5 @@
 public class Pessoa {
-    void exibeOlaMundo() {
+    public void exibeOlaMundo() {
         System.out.println("Ola, mundo!");
     }
 }
