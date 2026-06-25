@@ -17,13 +17,20 @@ Projeto Java simples para praticar Orientacao a Objetos com classes basicas de m
 - `src/Produto.java`
 - `src/Livro.java`
 - `src/EncapsulamentoPrincipal.java`
+- `src/br/com/alura/screenmatch/modelos/Titulo.java`
+- `src/br/com/alura/screenmatch/modelos/Filme.java`
+- `src/br/com/alura/screenmatch/modelos/Serie.java`
+- `src/br/com/alura/screenmatch/calculos/CalculadoraDeTempo.java`
+- `src/br/com/alura/screenmatch/principal/Principal.java`
 
 ## Como executar (PowerShell)
 
 ```powershell
-javac "src\*.java"
-java -cp src Principal
-java -cp src AtividadePrincipal
-java -cp src EncapsulamentoPrincipal
+$fontes = Get-ChildItem -Path "src" -Recurse -Filter "*.java" | ForEach-Object { $_.FullName }
+javac -d out $fontes
+java -cp out Principal
+java -cp out AtividadePrincipal
+java -cp out EncapsulamentoPrincipal
+java -cp out br.com.alura.screenmatch.principal.Principal
 ```
 
