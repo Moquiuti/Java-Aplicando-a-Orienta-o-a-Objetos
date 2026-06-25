@@ -8,9 +8,9 @@ public class AtividadePrincipal {
         System.out.println("Dobro de " + numero + ": " + calculadora.dobro(numero));
 
         Musica musica = new Musica();
-        musica.titulo = "Bohemian Rhapsody";
-        musica.artista = "Queen";
-        musica.anoLancamento = 1975;
+        musica.setTitulo("Bohemian Rhapsody");
+        musica.setArtista("Queen");
+        musica.setAnoLancamento(1975);
         musica.avalia(9.5);
         musica.avalia(8.0);
         musica.avalia(10.0);
@@ -18,15 +18,15 @@ public class AtividadePrincipal {
         System.out.println("Media das avaliacoes: " + musica.pegaMedia());
 
         Carro carro = new Carro();
-        carro.modelo = "Civic";
-        carro.ano = 2018;
-        carro.cor = "Prata";
+        carro.setModelo("Civic");
+        carro.setAno(2018);
+        carro.setCor("Prata");
         carro.exibeFichaTecnica();
         System.out.println("Idade do carro: " + carro.calculaIdade() + " anos");
 
         Aluno aluno = new Aluno();
-        aluno.nome = "Ana";
-        aluno.idade = 19;
+        aluno.setNome("Ana");
+        aluno.setIdade(19);
         aluno.exibeInformacoes();
     }
 }

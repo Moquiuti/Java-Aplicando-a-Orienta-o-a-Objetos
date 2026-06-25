@@ -1,19 +1,43 @@
 import java.time.Year;
 
 public class Carro {
-    String modelo;
-    int ano;
-    String cor;
+    private String modelo;
+    private int ano;
+    private String cor;
 
-    void exibeFichaTecnica() {
+    public void exibeFichaTecnica() {
         System.out.println("Modelo: " + modelo);
         System.out.println("Ano: " + ano);
         System.out.println("Cor: " + cor);
     }
 
-    int calculaIdade() {
+    public int calculaIdade() {
         int anoAtual = Year.now().getValue();
         return anoAtual - ano;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
     }
 }
 
