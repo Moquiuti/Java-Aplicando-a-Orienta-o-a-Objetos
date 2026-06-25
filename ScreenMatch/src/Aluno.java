@@ -1,11 +1,8 @@
+import java.util.Arrays;
+
 public class Aluno {
     private String nome;
-    private int idade;
-
-    public void exibeInformacoes() {
-        System.out.println("Nome: " + nome);
-        System.out.println("Idade: " + idade);
-    }
+    private double[] notas;
 
     public String getNome() {
         return nome;
@@ -15,12 +12,27 @@ public class Aluno {
         this.nome = nome;
     }
 
-    public int getIdade() {
-        return idade;
+    public double[] getNotas() {
+        if (notas == null) {
+            return new double[0];
+        }
+        return Arrays.copyOf(notas, notas.length);
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setNotas(double[] notas) {
+        this.notas = Arrays.copyOf(notas, notas.length);
+    }
+
+    public double calcularMedia() {
+        if (notas == null || notas.length == 0) {
+            return 0;
+        }
+
+        double soma = 0;
+        for (double nota : notas) {
+            soma += nota;
+        }
+        return soma / notas.length;
     }
 }
 
