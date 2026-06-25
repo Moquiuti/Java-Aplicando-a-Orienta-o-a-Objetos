@@ -26,8 +26,9 @@ public class AtividadePrincipal {
 
         Aluno aluno = new Aluno();
         aluno.setNome("Ana");
-        aluno.setIdade(19);
-        aluno.exibeInformacoes();
+        aluno.setNotas(new double[]{8.0, 7.5, 9.0});
+        System.out.println("Aluno: " + aluno.getNome());
+        System.out.println("Media: " + aluno.calcularMedia());
     }
 }
 
